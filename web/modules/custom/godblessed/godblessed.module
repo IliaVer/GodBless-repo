@@ -1,0 +1,15 @@
+<?php
+/**
+ * Implements hook_theme().
+
+ */
+function godblessed_theme($variables) {
+  return [
+    'godblessing_main_block' => [
+      'variables' => [
+        'nodes' => NULL
+      ],
+    ],
+  ];
+}
+

@@ -1,0 +1,7 @@
+name: GodBlessed
+description: Custom module
+type: module
+core: 8.x
+package: GodBlessing
+dependencies:
+  - block

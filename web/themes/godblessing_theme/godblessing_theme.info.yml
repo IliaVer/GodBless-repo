@@ -1,0 +1,10 @@
+name: GodBlessing
+type: theme
+base theme: classy
+description: A demo theme
+package: other
+core: 8.x
+
+regions:
+  header: 'Header'
+  content: 'Content'

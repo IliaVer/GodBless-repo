@@ -1,0 +1,21 @@
+{%
+  set classes = [
+    'block',
+    'block-' ~ configuration.provider|clean_class,
+    'block-' ~ plugin_id|clean_class,
+    'clearfix',
+    'godblessedblock'~ FirstBlock,
+  ]
+%}
+<section{{ attributes.addClass(classes) }}>
+  {% block content %}
+    {% for node in nodes %}
+      <div class = "nodes">
+       <h2>{{ node.title.value }}</h2>
+        {{ node.body.value | raw }}
+        {{ node.createdtime|format_date('medium') }}
+      </div>
+    {% endfor %}
+  {% endblock %}
+</section>
+

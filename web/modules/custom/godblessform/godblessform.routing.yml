@@ -1,0 +1,7 @@
+godblessform.form:
+ path: '/godform'
+ defaults:
+   _title: 'Application form'
+   _form: '\Drupal\godblessform\Form\GodForm'
+ requirements:
+   _permission: 'access content'

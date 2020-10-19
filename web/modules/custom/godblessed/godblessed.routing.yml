@@ -1,0 +1,12 @@
+godblessed.display_node:
+  name: GodBlessed block
+  path: '/display-node/{node}'
+  defaults:
+    _controller: '\Drupal\godblessed\Controller\DisplayNode::content'
+    _title_callback: '\Drupal\godblessed\Controller\DisplayNode::getTitle'
+  requirements:
+    _custom_access: '\Drupal\godblessed\Controller\DisplayNode::access'
+  options:
+    parameters:
+      node:
+        type:entity: node
