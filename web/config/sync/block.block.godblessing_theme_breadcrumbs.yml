@@ -1,0 +1,35 @@
+uuid: a654e9fc-97b4-48f5-8644-7658981bb222
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - system
+  theme:
+    - godblessing_theme
+_core:
+  default_config_hash: oXUb3JZR2WW5VOdw4HrhRicCsq51mCgLfRyvheG68ck
+id: godblessing_theme_breadcrumbs
+theme: godblessing_theme
+region: header
+weight: -7
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      page: page
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

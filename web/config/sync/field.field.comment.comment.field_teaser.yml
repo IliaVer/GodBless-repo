@@ -1,0 +1,21 @@
+uuid: 44805a4f-fff8-466d-895c-06b0ace99926
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.comment
+    - field.storage.comment.field_teaser
+  module:
+    - text
+id: comment.comment.field_teaser
+field_name: field_teaser
+entity_type: comment
+bundle: comment
+label: Teaser
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,20 @@
+uuid: efd0c978-3b23-426a-9dc8-79d27d226e22
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - godblessing_theme
+id: godblessing_theme_mainpagecontent
+theme: godblessing_theme
+region: content
+weight: -4
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: visible
+visibility: {  }

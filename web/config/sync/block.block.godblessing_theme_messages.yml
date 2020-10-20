@@ -1,0 +1,22 @@
+uuid: 8e5f801e-ac77-4f21-ba75-631547bfb5a4
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - godblessing_theme
+_core:
+  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
+id: godblessing_theme_messages
+theme: godblessing_theme
+region: header
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

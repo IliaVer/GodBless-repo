@@ -1,0 +1,28 @@
+uuid: ecef812c-a45b-4b14-a458-1fcb62fa62a9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.review.body
+    - node.type.review
+  module:
+    - text
+    - user
+id: node.review.default
+targetEntityType: node
+bundle: review
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

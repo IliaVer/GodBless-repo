@@ -1,0 +1,24 @@
+uuid: 76bf40ba-30e5-4317-8169-e2f68e30af5a
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.another_block
+  module:
+    - views
+  theme:
+    - godblessing_theme
+id: godblessing_theme_views_block__another_block_block_1
+theme: godblessing_theme
+region: header
+weight: 0
+provider: null
+plugin: 'views_block:another_block-block_1'
+settings:
+  id: 'views_block:another_block-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility: {  }

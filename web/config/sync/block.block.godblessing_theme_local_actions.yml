@@ -1,0 +1,20 @@
+uuid: cf49d0e3-1f36-4d72-90e7-f211228ed06f
+langcode: en
+status: true
+dependencies:
+  theme:
+    - godblessing_theme
+_core:
+  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
+id: godblessing_theme_local_actions
+theme: godblessing_theme
+region: content
+weight: -5
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

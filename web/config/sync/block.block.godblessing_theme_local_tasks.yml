@@ -1,0 +1,31 @@
+uuid: 527b39f6-dbd9-4d96-8840-4ee3f7941a65
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+  theme:
+    - godblessing_theme
+_core:
+  default_config_hash: X9I1OB0W3WlWtrK-CNcg6hNWwa8wficanpH8pYnDZDE
+id: godblessing_theme_local_tasks
+theme: godblessing_theme
+region: content
+weight: -7
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      page: page
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

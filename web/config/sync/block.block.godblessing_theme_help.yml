@@ -1,0 +1,22 @@
+uuid: 114ea39a-7209-4450-a65c-f7b1ab6f36d5
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - godblessing_theme
+_core:
+  default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
+id: godblessing_theme_help
+theme: godblessing_theme
+region: content
+weight: -6
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

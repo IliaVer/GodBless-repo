@@ -1,0 +1,21 @@
+uuid: 43fceb6a-2f37-4b26-a8d5-884dc3da1655
+langcode: en
+status: true
+dependencies:
+  module:
+    - godblessed
+  theme:
+    - godblessing_theme
+id: godblessedblock
+theme: godblessing_theme
+region: content
+weight: 0
+provider: null
+plugin: godblessed_first_block_block
+settings:
+  id: godblessed_first_block_block
+  label: GodBlessedBlock
+  provider: godblessed
+  label_display: visible
+  godblessed_first_block_settings: ''
+visibility: {  }
