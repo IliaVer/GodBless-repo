@@ -1,0 +1,5 @@
+name: GodblessUser
+description: A custom form for creating users.
+core: 8.x
+package: GodBlessing
+type: module
