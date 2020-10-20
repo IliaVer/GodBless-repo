@@ -62,7 +62,13 @@ class GodBlessedUser extends FormBase
   }
   public function submitForm(array &$form, FormStateInterface $form_state) {
     $user = \Drupal\user\Entity\User::create();
-    $user->set();
+    $user->set('firstname', $form_state->getValue('firstname'));
+    $user->set('lastname', $form_state->getValue('lastname'));
+    $user->set('pass', $form_state->getValue('pass'));
+    $user->set('confirm_pass', $form_state->getValue('confirm_pass'));
+    $user->set('mail', $form_state->getValue('mail'));
+    $user->activate();
+    $user->save();
   }
 }
 
