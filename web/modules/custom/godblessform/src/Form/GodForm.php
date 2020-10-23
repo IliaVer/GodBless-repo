@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * Contains \Drupal\godform\Form\GodForm.
+ * Contains \Drupal\godblessform\Form\GodForm.
  */
 namespace Drupal\godblessform\Form;
 

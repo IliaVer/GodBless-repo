@@ -1,7 +1,7 @@
 godblessuser.form:
- path: '/godblesseduser'
+ path: '/new-user'
  defaults:
    _title: 'Register form'
-   _form: '\Drupal\godblessuser\Form\GodBlessedUser'
+   _form: '\Drupal\godblessuser\Form\GodUser'
  requirements:
    _permission: 'access content'
