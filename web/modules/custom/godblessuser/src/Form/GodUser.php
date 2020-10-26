@@ -7,8 +7,6 @@ namespace Drupal\godblessuser\Form;
 
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
-use Drupal\node\Entity\Node;
-use Drupal\node\Entity\NodeType;
 use Drupal\user\Entity\User;
 
 class GodUser extends FormBase
@@ -22,7 +20,7 @@ class GodUser extends FormBase
   }
   public function buildForm(array $form, FormStateInterface $form_state) {
 
-    $form['firstname'] = [
+    $form['name'] = [
       '#type' => 'textfield',
       '#title' => $this->t('First name:'),
       '#required' => TRUE,
@@ -44,7 +42,7 @@ class GodUser extends FormBase
     ];
     $form['email'] = [
       '#type' => 'textfield',
-      '#title' => $this->t("E-mail;"),
+      '#title' => $this->t("E-mail:"),
       '#required' => TRUE,
     ];
 
@@ -58,16 +56,23 @@ class GodUser extends FormBase
   }
 
   public function validateForm(array &$form, FormStateInterface $form_state)  {
-
+    if ($form_state->getValue('confirm_pass') != $form_state->getValue('pass')) {
+      $form_state->setErrorByName('pass', t('Password is not correct'));
+    }
   }
   public function submitForm(array &$form, FormStateInterface $form_state) {
-    $user = \Drupal\user\Entity\User::create();
-    $user->set('firstname', $form_state->getValue('firstname'));
-    $user->set('lastname', $form_state->getValue('lastname'));
-    $user->set('pass', $form_state->getValue('pass'));
-    $user->set('confirm_pass', $form_state->getValue('confirm_pass'));
-    $user->set('mail', $form_state->getValue('mail'));
+    $user = User::create();
+    $user->set('name', $form_state->getValue('name'));
+    $user->set('field_lastname', $form_state->getValue('lastname'));
+    $user->setPassword($form_state->getValue('pass'));
+    $user->setEmail($form_state->getValue('email'));
+    $user->enforceIsNew();
     $user->activate();
     $user->save();
+    user_login_finalize($user);
+    $form_state->setRedirect('user.page');
+    //$uid = \Drupal::currentUser()->id();
+    //$user = User::load($uid);
+
   }
 }
