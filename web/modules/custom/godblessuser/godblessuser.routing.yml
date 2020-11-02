@@ -5,3 +5,5 @@ godblessuser.form:
    _form: '\Drupal\godblessuser\Form\GodUser'
  requirements:
    _permission: 'access content'
+   _role: 'anonymous'
+   _access: 'TRUE'
